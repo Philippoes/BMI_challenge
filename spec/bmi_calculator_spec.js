@@ -1,14 +1,14 @@
-describe('BMICalculator', function(){
-  var calculator
-  var person
+describe('BMICalculator', function() {
+  var calculator;
+  var person;
 
-  beforeEach(function(){
-    person = new Person({weight: 90, height: 186})
+  beforeEach(function() {
+    person = new Person({weight: 90, height: 186});
     calculator = new BMICalculator();
   });
 
-  it 'Calculates BMI for a person using metric method', funtion(){
+  it('Calculates BMI for a person using metric method', function(){
     calculator.metric_bmi(person);
-    expect(person.bmiValue).toEqual(26.01)
+    expect(person.bmiValue).toEqual(26.01);
   });
 });
