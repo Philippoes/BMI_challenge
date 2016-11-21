@@ -1,1 +1,32 @@
-function BMICalculator
+function BMICalculator(){
+};
+
+BMICalculator.prototype.metric_bmi = function(person) {
+  var weight = person.weight;
+  var height = person.height;
+  if (weight > 0 && height > 0) {
+    //sets so you need to have a weight & height above 0, the finalBmi will have an infinite loop if height is 0 since you can't divide by 0
+    var finalBmi = weight / (height / 100 * height / 100);
+    person.bmiValue = parseFloat(finalBmi.toFixed(2));
+    //Sets so it is parsing the value to only 2 decimals
+    setBMIMessage(person);
+  };
+};
+
+function setBMIMessage (person) {
+  if (person.bmiValue < 18.5 ) {
+    person.bmiMessage = 'Underweight';
+  };
+
+  if (person.bmiValue < 18.5 && person.bmiValue > 25) {
+    person.bmiMessage = 'Normal';
+  };
+
+  if (person.bmiValue < 25 && person.bmiValue > 30) {
+    person.bmiMessage = 'Overweight';
+  };
+
+  if (person.bmiValue > 30 ) {
+    person.bmiMessage = 'Obese';
+  };
+};
