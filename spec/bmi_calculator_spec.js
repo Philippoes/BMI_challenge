@@ -22,6 +22,7 @@ describe("BMICalculator", function() {
       person = new Person({weight: 200, height: 66, imperialswitch: true});
       calculate = new BMICalculator();
     });
+
       it ("Calculates BMI for a person using imperial method", function(){
         calculate.bmi(person);
         expect(person.bmiValue).toEqual(32.28);
