@@ -1,14 +1,15 @@
 function BMICalculator(){
 }
 
-BMICalculator.prototype.metric_bmi = function(person) {
+BMICalculator.prototype.bmi = function(person) {
   var weight = person.weight;
   var height = person.height;
+  var imperialswitch = person.imperialswitch;
   if (weight > 0 && height > 0) {
     //sets so you need to have a weight & height above 0, the finalBmi will have an infinite loop if height is 0 since you can"t divide by 0
     var k;
     var f;
-    if (imperial === true){
+    if (imperialswitch === true){
       f = 703;
       k = 1;
     }
