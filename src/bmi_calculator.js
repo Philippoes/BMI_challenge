@@ -1,5 +1,5 @@
 function BMICalculator(){
-};
+}
 
 BMICalculator.prototype.metric_bmi = function(person) {
   var weight = person.weight;
@@ -10,23 +10,23 @@ BMICalculator.prototype.metric_bmi = function(person) {
     person.bmiValue = parseFloat(finalBmi.toFixed(2));
     //Sets so it is parsing the value to only 2 decimals
     setBMIMessage(person);
-  };
+  }
 };
 
 function setBMIMessage (person) {
   if (person.bmiValue < 18.5 ) {
-    person.bmiMessage = 'Underweight';
-  };
+    person.bmiMessage = 'underweight';
+  }
 
-  if (person.bmiValue < 18.5 && person.bmiValue > 25) {
-    person.bmiMessage = 'Normal';
-  };
+  if (person.bmiValue >= 18.5 && person.bmiValue <= 25) {
+    person.bmiMessage = 'normal';
+  }
 
-  if (person.bmiValue < 25 && person.bmiValue > 30) {
-    person.bmiMessage = 'Overweight';
-  };
+  if (person.bmiValue > 25 && person.bmiValue <= 30) {
+    person.bmiMessage = 'overweight';
+  }
 
   if (person.bmiValue > 30 ) {
-    person.bmiMessage = 'Obese';
-  };
-};
+    person.bmiMessage = 'obese';
+  }
+}
