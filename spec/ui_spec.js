@@ -15,7 +15,6 @@ describe ("UI - index.html", function() {
      $("#height").val(186);
      expect($("#height").val()).toEqual ("186");
    });
- });
 
  describe ("Dispays response messages with metricswitch", function() {
    beforeEach(function() {
@@ -32,6 +31,7 @@ describe ("UI - index.html", function() {
    it ("About BMI message", function() {
      expect($("#display_message").text()).toEqual ("and you are overweight" );
    });
+ });
  });
 
  describe ("Dispays response messages with imperialswitch", function() {
@@ -51,6 +51,17 @@ describe ("UI - index.html", function() {
     });
   });
 
+ //  describe ("Should give error", function () {
+ //   it ("If there is no input in metric", function (){
+ //       $(':radio')[0].click();
+ //       $("#weight").val("");
+ //       $("#height").val("");
+ //       $("#calculate").click();
+ //       expect($("#display_value").text()).toEqual ("You have to input something if you want me to calculate!" );
+ //     });
+ // });
+});
+
   // describe ("You should be able to add your height in feet'inches''");
   // beforeEach(function() {
   //   $(':radio')[1].click();
@@ -60,7 +71,7 @@ describe ("UI - index.html", function() {
   // });
   //
   // it("Displays the right response message", function(){
-  //
+  //   expect($("$display_value").text()).toEqual ("Your BMI is xxxx");
   // });
 
 });

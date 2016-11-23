@@ -4,12 +4,17 @@ function BMICalculator(){
 BMICalculator.prototype.bmi = function(person) {
   var weight = person.weight;
   var height = person.height;
+  var feet = person.height_feet;
+  var inches = person.height_inches;
   var imperialswitch = person.imperialswitch;
-  if (weight > 0 && height > 0) {
+  if (weight > 0 && (height > 0 || feet > 0)) {
     //sets so you need to have a weight & height above 0, the finalBmi will have an infinite loop if height is 0 since you can"t divide by 0
     var k;
     var f;
     if (imperialswitch === true){
+      //Turn feet into inches, turn it into inches. put inches in the calculatio
+      totalfeet = feet * 12;
+      height = totalfeet + inches;
       f = 703;
       k = 1;
     }
