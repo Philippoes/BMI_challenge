@@ -27,5 +27,5 @@ describe("BMICalculator", function() {
         calculate.bmi(person);
         expect(person.bmiValue).toEqual(32.28);
       });
+    });
   });
-});

@@ -20,7 +20,6 @@ describe ("UI - index.html", function() {
  describe ("Dispays response messages with metricswitch", function() {
    beforeEach(function() {
      $(':radio')[0].click();
-    //  $( "input[type='radio']" )[0].click();
      $("#weight").val("90");
      $("#height").val("186");
      $("#calculate").click();
@@ -35,10 +34,9 @@ describe ("UI - index.html", function() {
    });
  });
 
- describe ("Dispays response messages with imeperialswitch", function() {
+ describe ("Dispays response messages with imperialswitch", function() {
     beforeEach(function() {
       $(':radio')[1].click();
-      // $( "input[type='radio']" )[1].click();
       $("#weight").val("200");
       $("#height").val("66");
       $("#calculate").click();
@@ -52,4 +50,17 @@ describe ("UI - index.html", function() {
       expect($("#display_message").text()).toEqual ("and you are obese" );
     });
   });
+
+  // describe ("You should be able to add your height in feet'inches''");
+  // beforeEach(function() {
+  //   $(':radio')[1].click();
+  //   $("#weight").val("200");
+  //   $("#height").val("6'2''");
+  //   $("#calculate").click();
+  // });
+  //
+  // it("Displays the right response message", function(){
+  //
+  // });
+
 });
