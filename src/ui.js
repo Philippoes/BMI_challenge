@@ -1,14 +1,19 @@
 $(document).ready(function () {
+  $("#feet").hide();
+  $("#inches").hide();
 
+  $("#metriccheck").click(function(){
+      $("#feet").hide();
+      $("#inches").hide();
+      $("#height").show();
+  });
 
-    // function showHeight() {
-    //        $("#height").style.display = 'visible';
-    //      }
-    //
-    //   function hideHeight(){
-    //         $("#height").style.display = 'hidden';
-    //       }
-    //
+  $("#imperialcheck").click(function(){
+      $("#height").hide();
+      $("#feet").show();
+      $("#inches").show();
+  });
+
   $("#calculate").click(function () {
     var w;
     var h;

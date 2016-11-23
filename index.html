@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>BMI Calculator</title>
+    <link rel="stylesheet" href="styles.css">
     <script src="src/person.js"></script>
     <script src="src/bmi_calculator.js"></script>
     <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
@@ -13,14 +14,14 @@
   </head>
   <body>
     <form action="">
-  <input type="radio" id="metrichcheck" name="imperialswitch" value="false" checked> Metric<br>
+  <input type="radio" id="metriccheck" name="imperialswitch" value="false" checked> Metric<br>
   <input type="radio" id="imperialcheck" name="imperialswitch" value="true"> Imperial<br>
 </form>
     <form>
-      <input type="text" id="weight" placeholder="Weight">
-      <input type="text" id="height" placeholder="Height">
-      <input type="text" id="feet" placeholder="Feet">
-      <input type="text" id="inches" placeholder="Inches">
+      <input type="number" id="weight" min="1" placeholder="Weight">
+      <input type="number" id="height" min="1" placeholder="Height">
+      <input type="number" id="feet" min="1" placeholder="Feet">
+      <input type="number" id="inches" min="1" placeholder="Inches">
       <input type="button" id="calculate" value="Calculate">
     </form>
     <div>
