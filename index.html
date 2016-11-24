@@ -14,26 +14,27 @@
 </noscript>
   </head>
   <body>
+    <h1><center>Calculate your BMI with Philip's magic computingmachine!</center></h1>
     <div class="row">
-      <div class="small-4 columns"> </div>
-      <div class="small-4 columns">
+      <div class="large-4 large-centered columns">
         <form>
-          <form action="">
-        <input type="radio" id="metriccheck" name="imperialswitch" value="false" checked> Metric
-        <input type="radio" id="imperialcheck" name="imperialswitch" value="true"> Imperial
-      </form>
-          <input type="number" id="weight" min="1" placeholder="Weight">
-          <input type="number" id="height" min="1" placeholder="Height">
+          <form action=""><center>
+            <input type="radio" id="metriccheck" name="imperialswitch" value="false" checked> Metric
+            <input type="radio" id="imperialcheck" name="imperialswitch" value="true"> Imperial
+          </center></form>
+          <input type="number" id="metricweight" min="1" placeholder="Weight in kg">
+          <input type="number" id="imperialweight" min="1" placeholder="Weight in pounds">
+          <input type="number" id="height" min="1" placeholder="Height in cm">
           <input type="number" id="feet" min="1" placeholder="Feet">
           <input type="number" id="inches" min="1" placeholder="Inches">
-          <button class="button" id="calculate" value="Calculate">Calculate</button>
+          <center><button class="button expanded" id="calculate" value="Calculate">Calculate</button></center>
         </form>
       </div>
-      <div class="small-4 columns"> </div>
     </div>
-    <div>
+    <div><center>
       <span id="display_value"></span>
       <span id="display_message"></span>
-    </div>
+      <span id="error_message"></span>
+    </center></div>
   </body>
 </html>

@@ -1,8 +1,12 @@
 body{
-  background-color: #eaeff4;
-  font-family: Helvetica
+  font-family: Helvetica;
 }
 
 .columns{
-  background-color: white
+  background-color: white;
+}
+
+span{
+  font-size: 20px;
+  color: red;
 }
