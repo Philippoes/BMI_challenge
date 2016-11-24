@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>BMI Calculator</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/foundation.min.css">
     <script src="src/person.js"></script>
     <script src="src/bmi_calculator.js"></script>
     <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
@@ -13,17 +14,23 @@
 </noscript>
   </head>
   <body>
-    <form action="">
-  <input type="radio" id="metriccheck" name="imperialswitch" value="false" checked> Metric<br>
-  <input type="radio" id="imperialcheck" name="imperialswitch" value="true"> Imperial<br>
-</form>
-    <form>
-      <input type="number" id="weight" min="1" placeholder="Weight">
-      <input type="number" id="height" min="1" placeholder="Height">
-      <input type="number" id="feet" min="1" placeholder="Feet">
-      <input type="number" id="inches" min="1" placeholder="Inches">
-      <input type="button" id="calculate" value="Calculate">
-    </form>
+    <div class="row">
+      <div class="small-4 columns"> </div>
+      <div class="small-4 columns">
+        <form>
+          <form action="">
+        <input type="radio" id="metriccheck" name="imperialswitch" value="false" checked> Metric
+        <input type="radio" id="imperialcheck" name="imperialswitch" value="true"> Imperial
+      </form>
+          <input type="number" id="weight" min="1" placeholder="Weight">
+          <input type="number" id="height" min="1" placeholder="Height">
+          <input type="number" id="feet" min="1" placeholder="Feet">
+          <input type="number" id="inches" min="1" placeholder="Inches">
+          <button class="button" id="calculate" value="Calculate">Calculate</button>
+        </form>
+      </div>
+      <div class="small-4 columns"> </div>
+    </div>
     <div>
       <span id="display_value"></span>
       <span id="display_message"></span>
