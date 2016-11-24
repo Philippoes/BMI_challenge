@@ -7,8 +7,10 @@ BMICalculator.prototype.bmi = function(person) {
   var feet = person.height_feet;
   var inches = person.height_inches;
   var imperialswitch = person.imperialswitch;
+  if (isNaN(person.height_inches)){
+    inches = 0;
+  }
   if (weight > 0 && (height > 0 || feet > 0)) {
-    //sets so you need to have a weight & height above 0, the finalBmi will have an infinite loop if height is 0 since you can"t divide by 0
     var k;
     var f;
     if (imperialswitch === true){

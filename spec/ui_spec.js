@@ -7,8 +7,8 @@ describe ("UI - index.html", function() {
 
   describe ("It should be able to take an input", function() {
    it ("Of weight, 90", function(){
-     $("#weight").val(90);
-     expect($("#weight").val()).toEqual ("90");
+     $("#metricweight").val(90);
+     expect($("#metricweight").val()).toEqual ("90");
    });
 
    it ("Of height 186", function(){
@@ -19,7 +19,7 @@ describe ("UI - index.html", function() {
  describe ("Dispays response messages with metricswitch", function() {
    beforeEach(function() {
      $(':radio')[0].click();
-     $("#weight").val("90");
+     $("#metricweight").val("90");
      $("#height").val("186");
      $("#calculate").click();
    });
@@ -37,7 +37,7 @@ describe ("UI - index.html", function() {
  describe ("Dispays response messages with imperialswitch", function() {
     beforeEach(function() {
       $(':radio')[1].click();
-      $("#weight").val("200");
+      $("#imperialweight").val("200");
       $("#feet").val("6");
       $("#inches").val("2");
       $("#calculate").click();

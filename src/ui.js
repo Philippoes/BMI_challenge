@@ -29,7 +29,7 @@ $(document).ready(function () {
       var o = parseFloat($("#feet").val());
       w = parseFloat($("#imperialweight").val());
       h = parseFloat($("#height").val());
-      if (k === undefined || o === undefined || w === undefined){
+      if (isNaN(o)|| isNaN(w)){
         $("#error_message").html("Please input integers!");
       } else {
         i = ($('input[name=imperialswitch]:checked').val() === "true");
@@ -42,11 +42,15 @@ $(document).ready(function () {
     else {
     w = parseFloat($("#metricweight").val());
     h = parseFloat($("#height").val());
+    if (isNaN(w) || isNaN(h)){
+      $("#error_message").html("Please input integers!");
+    } else {
     i = ($('input[name=imperialswitch]:checked').val() === "true");
     person = new Person({weight: w, height: h, imperialswitch: i});
     person.calculate_bmi();
     $("#display_value").html("Your BMI is " + person.bmiValue);
     $("#display_message").html("and you are "+ person.bmiMessage);
+  }
   }
   });
 
