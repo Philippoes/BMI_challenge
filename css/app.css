@@ -1,12 +1,22 @@
 body{
+  background-color: green;
   font-family: Helvetica;
-}
-
-.columns{
-  background-color: white;
 }
 
 span{
   font-size: 20px;
   color: red;
+}
+
+.BMI-calculator {
+  border: 1px solid #cacaca;
+  border-spacing: 1px 5px;
+  border-radius: 20px; }
+
+input[type="number"] {
+    width: 300px;
+}
+
+.button[class="button"] {
+  border-radius: 20px;
 }

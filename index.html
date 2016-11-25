@@ -16,21 +16,23 @@
   <body>
     <h1><center>Calculate your BMI with Philip's magic computingmachine!</center></h1>
     <div class="row">
-      <div class="large-4 large-centered columns">
+      <div class="medium-6 medium-centered large-4 large-centered columns">
+        <div class="row column BMI-calculator">
         <form>
           <form action=""><center>
-            <input type="radio" id="metriccheck" name="imperialswitch" value="false" checked> Metric
+            Metric <input type="radio" id="metriccheck" name="imperialswitch" value="false" checked>
             <input type="radio" id="imperialcheck" name="imperialswitch" value="true"> Imperial
           </center></form>
-          <input type="number" id="metricweight" min="1" placeholder="Weight in kg">
-          <input type="number" id="imperialweight" min="1" placeholder="Weight in pounds">
-          <input type="number" id="height" min="1" placeholder="Height in cm">
-          <input type="number" id="feet" min="1" placeholder="Feet">
-          <input type="number" id="inches" min="1" placeholder="Inches">
-          <center><button class="button expanded" id="calculate" value="Calculate">Calculate</button></center>
+          <center><input type="number" id="metricweight" min="1" placeholder="Weight in kg"></center>
+          <center><input type="number" id="imperialweight" min="1" placeholder="Weight in pounds"></center>
+          <center><input type="number" id="height" min="1" placeholder="Height in cm"></center>
+          <center><input type="number" id="feet" min="1" placeholder="Feet"></center>
+          <center><input type="number" id="inches" min="1" placeholder="Inches"></center>
+          <center><button class="button" id="calculate" value="Calculate">Calculate</button></center>
         </form>
       </div>
     </div>
+  </div>
     <div><center>
       <span id="display_value"></span>
       <span id="display_message"></span>
