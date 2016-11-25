@@ -1,14 +1,19 @@
-body{
-  background-color: green;
+.body {
+  background: linear-gradient(#ffffff 50%, rgba(255,255,255,0) 0) 0 0,
+  radial-gradient(circle closest-side, #FFFFFF 53%, rgba(255,255,255,0) 0) 0 0,
+  radial-gradient(circle closest-side, #FFFFFF 50%, rgba(255,255,255,0) 0) 55px 0 #48B;
+  background-size:110px 200px;
+  background-repeat:repeat-x;
   font-family: Helvetica;
 }
 
-span{
+span {
   font-size: 20px;
-  color: red;
+  color: white;
 }
 
 .BMI-calculator {
+  background-color: white;
   border: 1px solid #cacaca;
   border-spacing: 1px 5px;
   border-radius: 20px; }
@@ -19,4 +24,5 @@ input[type="number"] {
 
 .button[class="button"] {
   border-radius: 20px;
+  background-color: #48b
 }
